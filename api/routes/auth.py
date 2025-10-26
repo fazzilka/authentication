@@ -38,6 +38,7 @@ async def login(data: LoginIn, session: AsyncSession = Depends(get_session)):
     return TokenPair(access_token=access, refresh_token=refresh)
 
 @router.post("/refresh", response_model=dict)
+
 async def refresh(payload: TokenPayload = Depends(security.refresh_token_required)):
     # созаём новый access по refresh (uid берём из sub)
     new_access = security.create_access_token(uid=payload.sub)
