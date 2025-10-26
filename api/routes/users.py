@@ -10,3 +10,4 @@ router = APIRouter(
 @router.get("/me", response_model=UserRead)
 async def me(user = Depends(current_user)):
     return user
+    
