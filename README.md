@@ -116,7 +116,7 @@ docker compose down -v          # остановить и удалить volume 
 
 В проде: без --reload, используйте gunicorn/uvicorn workers, TLS (через nginx/traefik), CORS, rate limits.
 
-🆘 Частые проблемы
+🆘 Частые проблемы:
 
 FATAL: Peer/Ident authentication failed — проверь pg_hba.conf (метод md5/scram-sha-256) и перезапусти Postgres.
 
